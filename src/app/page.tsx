@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          {/* To include logo */}
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
         <div>
@@ -29,67 +29,103 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <Image
+        <h1> Tatiana Bertazoli</h1>
+        {/* <Image
           className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
           height={37}
           priority
-        />
+        /> */}
       </div>
 
       <div className={styles.grid}>
         <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href=""
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+            Portfolio <span>-&gt;</span>
+          </h2>          
         </a>
 
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href=""
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+            About Me <span>-&gt;</span>
+          </h2>          
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href=""
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
+            Contact <span>-&gt;</span>
+          </h2>          
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="../assets/Junior web developer - Resume.pdf"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            Resume <span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
         </a>
       </div>
     </main>
   )
 }
+
+
+// import React, { useState } from 'react';
+// import './App.css';
+// import Nav from './components/Nav';
+// import About from './components/About';
+// import Portfolio from './components/Portfolio';
+// import ContactForm from './components/Contact';
+// import Resume from './components/Resume';
+
+// function App() {
+//   const [contactSelected, setContactSelected] = useState(false);
+//   const [portfolioSelected, setPortfolioSelected] = useState(false);
+//   const [aboutMeSelected, setAboutMeSelected] = useState(true);
+//   const [resumeSelected, setResumeSelected] = useState(false);
+
+//   return (
+//     <div>
+//       <header>
+//         <Nav
+//           contactSelected={contactSelected}
+//           setContactSelected={setContactSelected}
+//           portfolioSelected={portfolioSelected}
+//           setPortfolioSelected={setPortfolioSelected}
+//           aboutMeSelected={aboutMeSelected}
+//           setAboutMeSelected={setAboutMeSelected}
+//           resumeSelected={resumeSelected}
+//           setResumeSelected={setResumeSelected}
+//         ></Nav>
+//       </header>
+//       <main>
+//         {aboutMeSelected && <About></About>}
+//         {portfolioSelected && <Portfolio></Portfolio>}
+//         {contactSelected && <ContactForm></ContactForm>}
+//         {resumeSelected && <Resume></Resume>}
+//       </main>
+//     </div >
+//   );
+// }
+
+
