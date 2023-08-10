@@ -1,31 +1,36 @@
+'use client'
+
+import { useState } from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
+// import Nav from './components/Nav';
+import { AiOutlineGithub, AiOutlineMail, AiOutlinePhone, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai";
+
 
 export default function Home() {
+
+  const [contactSelected, setContactSelected] = useState(false);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
+  const [aboutMeSelected, setAboutMeSelected] = useState(true);
+  const [resumeSelected, setResumeSelected] = useState(false);
+
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
           {/* To include logo */}
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code className={styles.code}>Welcome to my portfolio</code>
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+        <div className={styles.logo}>
+          <a href="mailto:tatianabertazoli@gmail.com"><AiOutlineMail /></a>
+          <a href="https://github.com/TBertazoli"><AiOutlineGithub /></a>
+          <a href="https://linkedin.com/in/tatibertazoli"><AiOutlineLinkedin /></a>
+          <a href="https://twitter.com/TBertazoli"><AiOutlineTwitter /></a>
+          <a href="tel:713-858-6951"><AiOutlinePhone /></a>
         </div>
+
       </div>
 
       <div className={styles.center}>
@@ -42,36 +47,57 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href=""
+          href="#portfolio"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
+          itemID='portfolio'
+          onClick={() => {
+            setAboutMeSelected(false);
+            setPortfolioSelected(true);
+            setContactSelected(false);
+            setResumeSelected(false);
+          }}
         >
-          <h2>
+          <h2 className={ `${portfolioSelected && 'navActive'}` } >
             Portfolio <span>-&gt;</span>
-          </h2>          
+          </h2>
         </a>
 
         <a
-          href=""
+          href="#about"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
+          itemID='about'
+          onClick={() => {
+            setAboutMeSelected(true);
+            setPortfolioSelected(false);
+            setContactSelected(false);
+            setResumeSelected(false);
+          }}
         >
-          <h2>
+          <h2 className={ `${aboutMeSelected && 'navActive'}` }>
             About Me <span>-&gt;</span>
-          </h2>          
+          </h2>
         </a>
 
         <a
-          href=""
+          href="#contact"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
+          itemID='contact'
+          onClick={() => {
+            setAboutMeSelected(false);
+            setPortfolioSelected(false);
+            setContactSelected(true);
+            setResumeSelected(false);
+          }}
         >
-          <h2>
+          <h2 className={ `${contactSelected && 'navActive'}` }>
             Contact <span>-&gt;</span>
-          </h2>          
+          </h2>
         </a>
 
         <a
@@ -92,7 +118,7 @@ export default function Home() {
 
 // import React, { useState } from 'react';
 // import './App.css';
-// import Nav from './components/Nav';
+
 // import About from './components/About';
 // import Portfolio from './components/Portfolio';
 // import ContactForm from './components/Contact';
