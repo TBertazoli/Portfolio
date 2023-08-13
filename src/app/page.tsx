@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link';
+
 // import Nav from './components/Nav';
 import { AiOutlineGithub, AiOutlineMail, AiOutlinePhone, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai";
 
@@ -64,24 +66,23 @@ export default function Home() {
           </h2>
         </a>
 
-        <a
-          href="#about"
+        {/* <a
+          href="/about"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
           itemID='about'
           onClick={() => {
-            setAboutMeSelected(true);
-            setPortfolioSelected(false);
-            setContactSelected(false);
-            setResumeSelected(false);
+            
           }}
         >
           <h2 className={ `${aboutMeSelected && 'navActive'}` }>
             About Me <span>-&gt;</span>
           </h2>
-        </a>
-
+        </a> */}
+        <Link href="/pages/about">About Me<span>-&gt;</span></Link>
+        
+        
         <a
           href="#contact"
           className={styles.card}
