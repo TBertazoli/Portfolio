@@ -1,30 +1,24 @@
-:root {
-  --primary-color: rgb(105, 73, 103);
-  --secondary-color: #434146;
-  --tertiary--color: White;
-}
-
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-body {
+/* body {
   background-color: rgb(171, 165, 179);
   font-family: sans-serif;
-}
+} */
 
 /*header section*/
-header {
-  background-color: var(--primary-color);
+/* header {
+  background-color: rgb(105, 73, 103);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: 80px;
   align-items: center;
   position: relative;
-}
+} */
 
 .main_title {
   background-color: white;
@@ -37,7 +31,7 @@ header {
 
 .main_title a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: rgb(105, 73, 103);
   font: sans-serif;
 }
 
@@ -65,9 +59,9 @@ header {
 }
 
 .navActive {
- background-color: #744988;
- border-radius: 30px;
- margin:5px;
+  background-color: #744988;
+  border-radius: 30px;
+  margin: 5px;
 }
 
 /*End of Header section*/
@@ -76,7 +70,7 @@ header {
 .subtitle {
   font-size: 20px;
   background-color: var(--tertiary--color);
-  color: var(--primary-color);
+  color: rgb(105, 73, 103);
   padding: 5px 5px;
   margin: 15px;
   position: absolute;
@@ -103,33 +97,41 @@ header {
 }
 
 .description {
-  background-color: var(--primary-color);
+  background-color: rgb(105, 73, 103);
   text-align: justify;
   font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  min-height: 400px;
+  
+  
 }
 
 .description p {
-  padding: 10px
+  padding: 10px;
+  text-indent: 20px;
+  line-height: 2;
 }
 
-.about_me img {
-  height: 120px;
+.profile_pic {
   margin: 15px;
+  float: right;
+  height: fit-content;
 }
 
 /*portfolio section*/
 .title {
   font-size: 22px;
-  color: var(--secondary-color);
+  color: #434146;
   margin: 10px;
 }
 
 .project_wrap,
 .resume {
-  background-color: var(--primary-color);
+  background-color: rgb(105, 73, 103);
   margin: 10px;
   padding: 10px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid rgb(105, 73, 103);
   color: var(--tertiary--color);
   margin-bottom: 20px;
 }
@@ -143,11 +145,11 @@ header {
 .project_name {
   margin-bottom: 10px;
   font-size: 18px;
-  color: var(--tertiary-color);
+  color: White;
 }
 
 .box {
-  border: 5px solid var(--primary-color);
+  border: 5px solid rgb(105, 73, 103);
   box-shadow: 4px 4px 8px #493858;
   border-radius: 5px;
   margin: 20px;
@@ -167,7 +169,7 @@ header {
 }
 
 .modalContainer {
-  background: var(--primary-color);
+  background: rgb(105, 73, 103);
   border-radius: 5px;
   margin: 50px auto;
   padding: 15px;
@@ -242,7 +244,7 @@ header {
 /* Footer section */
 
 .footer {
-  color: var(--secondary-color);
+  color: #434146;
   margin: 20px 10px 0px 60px;
   display: flex;
   justify-content: center;
@@ -330,6 +332,12 @@ header {
 /*this will be applied on any screen smaller than 575px*/
 @media screen and (max-width:575px) {
 
+  .profile_pic {
+    
+    margin: 15px;
+    width: auto;
+  }
+
   .navigation nav ul li a,
   .navigation nav ul li span {
     font-size: 15px;
@@ -340,7 +348,7 @@ header {
   }
 
   .modalContainer {
-    background: var(--primary-color);
+    background: rgb(105, 73, 103);
     border-radius: 5px;
     margin: 50px auto;
     padding: 15px;

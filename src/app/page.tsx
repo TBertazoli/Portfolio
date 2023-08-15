@@ -11,18 +11,14 @@ import { AiOutlineGithub, AiOutlineMail, AiOutlinePhone, AiOutlineLinkedin, AiOu
 
 export default function Home() {
 
-  const [contactSelected, setContactSelected] = useState(false);
-  const [portfolioSelected, setPortfolioSelected] = useState(false);
-  const [aboutMeSelected, setAboutMeSelected] = useState(true);
-  const [resumeSelected, setResumeSelected] = useState(false);
 
 
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          {/* To include logo */}
           <code className={styles.code}>Welcome to my portfolio</code>
+          
         </p>
 
         <div className={styles.logo}>
@@ -37,122 +33,31 @@ export default function Home() {
 
       <div className={styles.center}>
         <h1> Tatiana Bertazoli</h1>
-        {/* <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        /> */}
       </div>
 
       <div className={styles.grid}>
-        <a
-          href="#portfolio"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-          itemID='portfolio'
-          onClick={() => {
-            setAboutMeSelected(false);
-            setPortfolioSelected(true);
-            setContactSelected(false);
-            setResumeSelected(false);
-          }}
-        >
-          <h2 className={ `${portfolioSelected && 'navActive'}` } >
-            Portfolio <span>-&gt;</span>
-          </h2>
-        </a>
+        <Link href="/pages/portfolio"
+          className={styles.card}>
+          Portfolio<span>-&gt;</span>
+        </Link>
 
-        {/* <a
-          href="/about"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-          itemID='about'
-          onClick={() => {
-            
-          }}
-        >
-          <h2 className={ `${aboutMeSelected && 'navActive'}` }>
-            About Me <span>-&gt;</span>
-          </h2>
-        </a> */}
-        <Link href="/pages/about">About Me<span>-&gt;</span></Link>
-        
-        
-        <a
-          href="#contact"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-          itemID='contact'
-          onClick={() => {
-            setAboutMeSelected(false);
-            setPortfolioSelected(false);
-            setContactSelected(true);
-            setResumeSelected(false);
-          }}
-        >
-          <h2 className={ `${contactSelected && 'navActive'}` }>
-            Contact <span>-&gt;</span>
-          </h2>
-        </a>
+        <Link href="/pages/about"
+          className={styles.card}>
+          About Me<span>-&gt;</span>
+        </Link>
 
-        <a
-          href="../assets/Junior web developer - Resume.pdf"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Resume <span>-&gt;</span>
-          </h2>
-        </a>
+        <Link href="/pages/contact"
+          className={styles.card}>
+          Contact Me<span>-&gt;</span>
+        </Link>
+
+        <Link href="../assets/Junior web developer - Resume.pdf"
+          className={styles.card}>
+          Resume<span>-&gt;</span>
+        </Link>
       </div>
     </main>
   )
 }
-
-
-// import React, { useState } from 'react';
-// import './App.css';
-
-// import About from './components/About';
-// import Portfolio from './components/Portfolio';
-// import ContactForm from './components/Contact';
-// import Resume from './components/Resume';
-
-// function App() {
-//   const [contactSelected, setContactSelected] = useState(false);
-//   const [portfolioSelected, setPortfolioSelected] = useState(false);
-//   const [aboutMeSelected, setAboutMeSelected] = useState(true);
-//   const [resumeSelected, setResumeSelected] = useState(false);
-
-//   return (
-//     <div>
-//       <header>
-//         <Nav
-//           contactSelected={contactSelected}
-//           setContactSelected={setContactSelected}
-//           portfolioSelected={portfolioSelected}
-//           setPortfolioSelected={setPortfolioSelected}
-//           aboutMeSelected={aboutMeSelected}
-//           setAboutMeSelected={setAboutMeSelected}
-//           resumeSelected={resumeSelected}
-//           setResumeSelected={setResumeSelected}
-//         ></Nav>
-//       </header>
-//       <main>
-//         {aboutMeSelected && <About></About>}
-//         {portfolioSelected && <Portfolio></Portfolio>}
-//         {contactSelected && <ContactForm></ContactForm>}
-//         {resumeSelected && <Resume></Resume>}
-//       </main>
-//     </div >
-//   );
-// }
 
 
