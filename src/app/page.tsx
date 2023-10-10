@@ -1,15 +1,8 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Contact from "./components/Contact";
 
 // import Nav from './components/Nav';
-import {
-  AiOutlineGithub,
-  AiOutlineMail,
-  AiOutlinePhone,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -24,23 +17,7 @@ export default function Home() {
         <h1> Tatiana Bertazoli</h1>
       </div>
 
-      <div className={styles.logo}>
-        <a href="mailto:tatianabertazoli@gmail.com">
-          <AiOutlineMail />
-        </a>
-        <a href="https://github.com/TBertazoli">
-          <AiOutlineGithub />
-        </a>
-        <a href="https://linkedin.com/in/tatibertazoli">
-          <AiOutlineLinkedin />
-        </a>
-        <a href="https://twitter.com/TBertazoli">
-          <AiOutlineTwitter />
-        </a>
-        <a href="tel:713-858-6951">
-          <AiOutlinePhone />
-        </a>
-      </div>
+      <Contact></Contact>
 
       <div className={styles.grid}>
         <Link href="/pages/portfolio" className={styles.card}>
