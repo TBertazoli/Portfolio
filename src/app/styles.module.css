@@ -103,8 +103,8 @@
   padding: 10px;
   margin: 10px;
   min-height: 400px;
-  
-  
+
+
 }
 
 .description p {
@@ -125,6 +125,14 @@
   color: #434146;
   margin: 10px;
 }
+
+
+.title li {
+  display: inline;
+}
+
+
+
 
 .project_wrap,
 .resume {
@@ -333,7 +341,7 @@
 @media screen and (max-width:575px) {
 
   .profile_pic {
-    
+
     margin: 15px;
     width: auto;
   }
