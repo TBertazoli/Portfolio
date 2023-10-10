@@ -28,10 +28,6 @@ export default function Home() {
           About Me<span>-&gt;</span>
         </Link>
 
-        <Link href="/pages/contact" className={styles.card}>
-          Contact Me<span>-&gt;</span>
-        </Link>
-
         <Link
           href="../assets/Junior web developer - Resume.pdf"
           className={styles.card}
