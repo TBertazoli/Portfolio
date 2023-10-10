@@ -97,14 +97,12 @@
 }
 
 .description {
-  background-color: rgb(105, 73, 103);
+  background-color: gray;
   text-align: justify;
   font-size: 20px;
   padding: 10px;
   margin: 10px;
   min-height: 400px;
-
-
 }
 
 .description p {
@@ -119,6 +117,10 @@
   height: fit-content;
 }
 
+.div.list-group-item {
+  padding-bottom: 10px;
+}
+
 /*portfolio section*/
 .title {
   font-size: 22px;
@@ -126,13 +128,9 @@
   margin: 10px;
 }
 
-
 .title li {
   display: inline;
 }
-
-
-
 
 .project_wrap,
 .resume {
@@ -166,7 +164,7 @@
 
 /* modal */
 .modalBackdrop {
-  background: rgba(0, 0, 0, .65);
+  background: rgba(0, 0, 0, 0.65);
   bottom: 0;
   left: 0;
   overflow: auto;
@@ -189,7 +187,6 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 25px;
-
 }
 
 .modalImage {
@@ -263,28 +260,33 @@
   font-size: larger;
 }
 
-
 .button-72 {
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
   border-radius: 42px;
   border-width: 0;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px, rgba(179, 132, 201, 0.4) 0 8px 12px;
-  color: #FFFFFF;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   font-family: Quicksand, sans-serif;
   font-size: 18px;
   font-weight: 700;
   justify-content: center;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   line-height: 16px;
   margin: 0;
   padding: 18px 18px;
   text-align: center;
   text-decoration: none;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px, rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px, rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -292,13 +294,12 @@
 }
 
 .button-72:hover {
-  background-image: linear-gradient(#B384C9, #391F5B 50%);
+  background-image: linear-gradient(#b384c9, #391f5b 50%);
 }
-
 
 /*MEDIA QUERY FOR SMALLER DESKTOPS SCREENS*/
 /*this will be applied on any screen smaller than 980px*/
-@media screen and (max-width:980px) {
+@media screen and (max-width: 980px) {
   .description {
     min-height: 500px;
   }
@@ -306,7 +307,7 @@
 
 /*MEDIA QUERY FOR TABLETS AND SMALLER*/
 /*this will be applied on any screen between 768px to 575px*/
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .contact_info {
     display: flex;
     flex-direction: column;
@@ -335,13 +336,10 @@
   }
 }
 
-
 /*MEDIA QUERIE FOR MOBILE PHONES AND SMALLER*/
 /*this will be applied on any screen smaller than 575px*/
-@media screen and (max-width:575px) {
-
+@media screen and (max-width: 575px) {
   .profile_pic {
-
     margin: 15px;
     width: auto;
   }

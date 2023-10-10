@@ -1,6 +1,5 @@
 // Type: Component File
 
-import coverImage from "../../assets/cover.jpg";
 import profilePic from "../../assets/pictures/DSC08249_2.jpg";
 import styles from "../../styles.module.css";
 import Image from "next/image";
@@ -16,6 +15,7 @@ export default function About() {
         <div className={styles.title}>
           <h2>About Me</h2>
         </div>
+
         <div className={styles.description}>
           <Image
             src={profilePic}
@@ -39,6 +39,7 @@ export default function About() {
             web developer.
           </p>
         </div>
+
         <Skills></Skills>
       </div>
     </section>
