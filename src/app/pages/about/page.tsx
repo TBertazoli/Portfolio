@@ -1,7 +1,7 @@
 // Type: Component File
 
 import profilePic from "../../assets/pictures/DSC08249_2.jpg";
-import styles from "../../styles.module.css";
+import styles from "../../page.module.css";
 import Image from "next/image";
 import Skills from "../../components/Skill";
 

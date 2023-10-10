@@ -2,12 +2,10 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Contact from "./components/Contact";
 
-// import Nav from './components/Nav';
-
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div className={styles.introduction}>
         <p>
           <code className={styles.code}>Welcome to my portfolio</code>
         </p>

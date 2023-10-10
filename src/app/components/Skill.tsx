@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "../styles.module.css";
+import styles from "../page.module.css";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function Skills() {
