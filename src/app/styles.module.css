@@ -53,60 +53,8 @@
   color: var(--tertiary--color);
 }
 
-/*Contact Me section*/
-.contact_form {
-  width: 80%;
-  margin: auto;
-}
-
-.contact_me div {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.contact_me div label {
-  cursor: default;
-  width: 20%;
-  margin-left: 10px;
-}
-
-.contact_me textarea,
-.contact_me input {
-  width: 80%;
-}
-
-.contact_me textarea {
-  height: 120px;
-  border: 3px;
-  padding: 5px;
-}
-
 .button_wrapper {
   justify-content: end;
-}
-
-/* resume section */
-.download {
-  margin: 20px;
-}
-
-.resume li,
-.resume h2 {
-  margin: 20px;
-}
-
-/* Footer section */
-
-.footer {
-  color: #434146;
-  margin: 20px 10px 0px 60px;
-  display: flex;
-  justify-content: center;
-}
-
-.links a {
-  margin: 10px;
-  font-size: larger;
 }
 
 .button72 {
@@ -157,27 +105,9 @@
 /*MEDIA QUERY FOR TABLETS AND SMALLER*/
 /*this will be applied on any screen between 768px to 575px*/
 @media screen and (max-width: 768px) {
-  .contact_info {
-    display: flex;
-    flex-direction: column;
-  }
-
   .button-72 {
     font-size: 21px;
     padding: 18px 34px;
-  }
-
-  .contact_info div {
-    border-bottom: none;
-  }
-
-  .navigation nav ul {
-    margin: 0;
-  }
-
-  .navigation nav ul li a,
-  .navigation nav ul li span {
-    font-size: 22px;
   }
 
   .title {
@@ -191,11 +121,6 @@
   .profile_pic {
     margin: 15px;
     width: auto;
-  }
-
-  .navigation nav ul li a,
-  .navigation nav ul li span {
-    font-size: 15px;
   }
 
   .title {
@@ -214,13 +139,5 @@
   .button-72 {
     font-size: 15px;
     padding: 10px 24px;
-  }
-
-  .description {
-    padding: 5px;
-  }
-
-  .contact_me .description {
-    font-size: 14px;
   }
 }

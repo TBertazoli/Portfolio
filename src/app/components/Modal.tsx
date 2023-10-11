@@ -2,8 +2,22 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles.module.css";
 
-const Modal = ({ onClose, currentProject }) => {
-  const { name, description, website, repository, index } = currentProject;
+interface ModalProps {
+  onClose: () => void;
+  currentProject:
+    | {
+        name: string;
+        description: string;
+        website: string;
+        repository: string;
+        index: number;
+      }
+    | undefined;
+}
+
+const Modal = ({ onClose, currentProject }: ModalProps) => {
+  const { name, description, website, repository, index } =
+    currentProject || {};
 
   return (
     <div className={styles.modalBackdrop}>
