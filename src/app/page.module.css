@@ -1,4 +1,5 @@
 /* Main section */
+
 .main {
   display: flex;
   flex-direction: column;
@@ -138,15 +139,21 @@
   font-size: 20px;
   padding: 10px;
   margin: 10px;
-  min-height: 400px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
 }
 
 .prework {
   max-width: 600px;
-  height: auto;
+  height: 400px;
 }
+
+.carousel img {
+  object-position: center;
+  object-fit: cover;
+}
+
 .caption {
   background-color: #939197;
   border-radius: 10px;
@@ -271,6 +278,14 @@
     background-color: gray;
     padding: 10px;
     margin: 10px;
+  }
+}
+
+@media (max-width: 701px) {
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
   }
 }
 

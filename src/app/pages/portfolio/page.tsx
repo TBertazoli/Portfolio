@@ -87,7 +87,12 @@ export default function Portfolio() {
           )}
         </div>
         <div className={styles.description_portfolio}>
-          <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            interval={null}
+            className={styles.carousel}
+          >
             {projects.map((project, index) => (
               <Carousel.Item key={project.name}>
                 <div>
