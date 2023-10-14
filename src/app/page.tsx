@@ -1,6 +1,9 @@
+"use client";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Contact from "./components/Contact";
+
+import file from "./assets/Junior_web_developer_Resume.pdf";
 
 export default function Home() {
   return (
@@ -26,10 +29,7 @@ export default function Home() {
           About Me<span>-&gt;</span>
         </Link>
 
-        <Link
-          href="../assets/Junior web developer - Resume.pdf"
-          className={styles.card}
-        >
+        <Link href={file} className={styles.card}>
           Resume<span>-&gt;</span>
         </Link>
       </div>
