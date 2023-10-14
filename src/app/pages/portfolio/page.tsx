@@ -5,7 +5,8 @@ import Modal from "../../components/Modal";
 import Image from "next/image";
 import styles from "../../page.module.css";
 import Carousel from "react-bootstrap/Carousel";
-import { edgeServerPages } from "next/dist/build/webpack/plugins/pages-manifest-plugin";
+import Link from "next/link";
+import { TbArrowBackUpDouble } from "react-icons/tb";
 
 export default function Portfolio() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -80,6 +81,9 @@ export default function Portfolio() {
       <div id="portfolio">
         <div className={styles.title}>
           <h2>Portfolio</h2>
+          <Link href="/">
+            <TbArrowBackUpDouble />
+          </Link>
         </div>
         <div>
           {isModalOpen && (

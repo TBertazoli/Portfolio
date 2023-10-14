@@ -126,6 +126,10 @@
   height: fit-content;
 }
 
+.div.list-group-item {
+  background-color: black;
+}
+
 /*portfolio section*/
 .title {
   font-size: 22px;

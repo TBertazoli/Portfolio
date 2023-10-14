@@ -11,7 +11,7 @@ function Skills() {
         <h2>Skills</h2>
       </div>
       <div className={styles.description}>
-        <ListGroup>
+        <ListGroup className={styles.skills}>
           <ListGroup.Item>HTML</ListGroup.Item>
           <ListGroup.Item>CSS</ListGroup.Item>
           <ListGroup.Item>JavaScript</ListGroup.Item>
