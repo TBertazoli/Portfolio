@@ -1,3 +1,5 @@
+/* Main section */
+
 .main {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   min-height: 100vh;
 }
 
-.description {
+.introduction {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -18,14 +20,14 @@
   font-family: var(--font-mono);
 }
 
-.description a {
+.introduction a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.description p {
+.introduction p {
   position: relative;
   margin: 0;
   padding: 1rem;
@@ -41,9 +43,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+  text-align: center;
 }
 
 .card {
@@ -80,33 +83,100 @@
   padding: 4rem 0;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
+/*about me section*/
+.subtitle {
+  font-size: 20px;
+  background-color: var(--tertiary--color);
+  color: rgb(105, 73, 103);
+  padding: 5px 5px;
+  margin: 15px;
   position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
 }
 
-.logo {
-  position: relative;
+.cover {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-height: 200px;
 }
+
+.about_me {
+  margin: 0px 10px 30px 0px;
+  padding: 10px;
+}
+
+.description {
+  background-color: gray;
+  text-align: justify;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  min-height: 400px;
+}
+
+.description p {
+  padding: 10px;
+  text-indent: 20px;
+  line-height: 2;
+}
+
+.profile_pic {
+  margin: 15px;
+  float: right;
+  height: fit-content;
+}
+
+.div.list-group-item {
+  background-color: black;
+}
+
+/*portfolio section*/
+.title {
+  font-size: 22px;
+  color: #434146;
+  margin: 10px;
+}
+
+.description_portfolio {
+  background-color: gray;
+  text-align: justify;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.prework {
+  max-width: 600px;
+  height: 400px;
+}
+
+.carousel img {
+  object-position: center;
+  object-fit: cover;
+}
+
+.caption {
+  background-color: #939197;
+  border-radius: 10px;
+  border-color: rgba(67, 65, 70, 1);
+  opacity: 0.7;
+}
+.project_name {
+  font-size: 15px;
+  color: black;
+}
+
+.box {
+  border: 5px solid rgb(105, 73, 103);
+  box-shadow: 4px 4px 8px #493858;
+  border-radius: 5px;
+  margin: 20px;
+  max-width: 60%;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -155,23 +225,23 @@
     height: 300px;
   }
 
-  .description {
+  .introduction {
     font-size: 0.8rem;
   }
 
-  .description a {
+  .introduction a {
     padding: 1rem;
   }
 
-  .description p,
-  .description div {
+  .introduction p,
+  .introduction div {
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
   }
 
-  .description p {
+  .introduction p {
     align-items: center;
     inset: 0 0 auto;
     padding: 2rem 1rem 1.4rem;
@@ -187,7 +257,7 @@
     backdrop-filter: blur(24px);
   }
 
-  .description div {
+  .introduction div {
     align-items: flex-end;
     pointer-events: none;
     inset: auto 0 0;
@@ -206,6 +276,20 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
+  }
+
+  .description_portfolio {
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 701px) {
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
   }
 }
 

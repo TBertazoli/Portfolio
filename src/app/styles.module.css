@@ -1,0 +1,143 @@
+/* Hero section */
+
+/* Contact section */
+.logo {
+  display: flex;
+}
+.logo a {
+  margin: 10px;
+  padding: 10px;
+}
+
+/*End of Hero Section*/
+
+/* modal */
+.modalBackdrop {
+  background: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.modalContainer {
+  background: lightgray;
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 15px;
+  width: 960px;
+  text-align: center;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.modalImage {
+  height: 70%;
+  width: 70%;
+}
+
+.modalContainer p {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.modalContainer p a {
+  text-decoration: none;
+  color: var(--tertiary--color);
+}
+
+.button_wrapper {
+  justify-content: end;
+}
+
+.button72 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-72:hover {
+  background-image: linear-gradient(#b384c9, #391f5b 50%);
+}
+
+/*MEDIA QUERY FOR SMALLER DESKTOPS SCREENS*/
+/*this will be applied on any screen smaller than 980px*/
+@media screen and (max-width: 980px) {
+  .description {
+    min-height: 500px;
+  }
+}
+
+/*MEDIA QUERY FOR TABLETS AND SMALLER*/
+/*this will be applied on any screen between 768px to 575px*/
+@media screen and (max-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
+
+/*MEDIA QUERIE FOR MOBILE PHONES AND SMALLER*/
+/*this will be applied on any screen smaller than 575px*/
+@media screen and (max-width: 575px) {
+  .profile_pic {
+    margin: 15px;
+    width: auto;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .modalContainer {
+    background: rgb(105, 73, 103);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .button-72 {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}
