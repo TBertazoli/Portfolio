@@ -104,6 +104,7 @@
   margin: 15px;
   float: right;
   height: fit-content;
+  box-shadow: 3px 4px 25px black;
 }
 
 /*portfolio section*/
