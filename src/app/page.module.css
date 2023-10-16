@@ -20,13 +20,6 @@
   font-family: var(--font-mono);
 }
 
-.introduction a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .introduction p {
   position: relative;
   margin: 0;
@@ -60,19 +53,6 @@
 .card span {
   display: inline-block;
   transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
 }
 
 .center {
@@ -126,10 +106,6 @@
   height: fit-content;
 }
 
-.div.list-group-item {
-  background-color: black;
-}
-
 /*portfolio section*/
 .title {
   font-size: 22px;
@@ -167,14 +143,6 @@
 .project_name {
   font-size: 15px;
   color: black;
-}
-
-.box {
-  border: 5px solid rgb(105, 73, 103);
-  box-shadow: 4px 4px 8px #493858;
-  border-radius: 5px;
-  margin: 20px;
-  max-width: 60%;
 }
 
 /* Enable hover only on non-touch devices */
@@ -229,9 +197,9 @@
     font-size: 0.8rem;
   }
 
-  .introduction a {
+  /* .introduction a {
     padding: 1rem;
-  }
+  } */
 
   .introduction p,
   .introduction div {
