@@ -101,7 +101,7 @@ export default function Portfolio() {
               <Carousel.Item key={project.name}>
                 <div>
                   <Image
-                    src={require(`../../assets/Projects/${index}.png`)}
+                    src={require(`../../assets/projects/${index}.png`)}
                     alt={project.name}
                     className={styles.prework}
                   ></Image>
