@@ -71,7 +71,7 @@ export default function Portfolio() {
       name: "Oinc",
       description:
         "This project was to develop a budget app where users can add income and expenses and add budget",
-      website: "https://oinc.herokuapp.com"
+      website: "https://oinc.herokuapp.com",
       repository: "https://github.com/emsaw721/stacks-on-stacks",
     },
   ]);
