@@ -1,12 +1,26 @@
 "use client";
 
 import React from "react";
+import { projects } from "../../components/Projects";
 import Modal from "../../components/Modal";
 import Image from "next/image";
 import styles from "../../page.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import Link from "next/link";
 import { TbArrowBackUpDouble } from "react-icons/tb";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Collapse from "@mui/material/Collapse";
+import Avatar from "@mui/material/Avatar";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import { autocompleteClasses } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import ShareIcon from "@mui/icons-material/Share";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 export default function Portfolio() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -26,63 +40,13 @@ export default function Portfolio() {
     setIsModalOpen(!isModalOpen);
   };
 
-  const [projects] = React.useState([
-    {
-      name: "Prework Study Guide",
-      description: "This project was an introduction of HTML and CSS",
-      website: "https://tbertazoli.github.io/prework-study-guide/",
-      repository: "https://github.com/TBertazoli/prework-study-guide",
-    },
-    {
-      name: "Run Buddy",
-      description:
-        "This project was to develop a complete website using only HTML and CSS",
-      website: "https://tbertazoli.github.io/run-buddy/",
-      repository: "https://github.com/TBertazoli/run-buddy",
-    },
-    {
-      name: "Horiseon",
-      description: "",
-      website: "https://tbertazoli.github.io/Horiseon/",
-      repository: "https://github.com/TBertazoli/Horiseon",
-    },
-    {
-      name: "Pizza Hunt",
-      description:
-        "This project wa to develop a website where you can create new pizzas and add comments",
-      website: "https://pizza-bertazoli.herokuapp.com/",
-      repository: "https://github.com/TBertazoli/pizza-hunt",
-    },
-    {
-      name: "Project Fitness",
-      description:
-        "On this project I was responsible for writting the front-end JavaScript functionality. Created local storage and functions to store the weight, height and date. Created a function to calculate BMI and added a calendar to track the workout progress page.",
-      website: "https://tbertazoli.github.io/Project-Fitness/",
-      repository: "https://github.com/TBertazoli/Project-Fitness",
-    },
-    {
-      name: "Lab Notebook",
-      description:
-        "This project was to develop a virtual lab notebook where users can create projects and experiments",
-      website: "https://lab-notes.herokuapp.com",
-      repository: "https://github.com/emsaw721/lab-rats",
-    },
-    {
-      name: "Oinc",
-      description:
-        "This project was to develop a budget app where users can add income and expenses and add budget",
-      website: "https://oinc.herokuapp.com",
-      repository: "https://github.com/emsaw721/stacks-on-stacks",
-    },
-  ]);
-
   return (
-    <section>
+    <>
       <div id="portfolio">
         <div className={styles.title}>
           <h2>Portfolio</h2>
           <Link href="/">
-            <TbArrowBackUpDouble />
+            <ArrowBackIosIcon />
           </Link>
         </div>
         <div>
@@ -99,12 +63,15 @@ export default function Portfolio() {
           >
             {projects.map((project, index) => (
               <Carousel.Item key={project.name}>
-                <div>
+                <div style={{ position: "relative" }}>
                   <Image
-                    src={require(`../../assets/projects/${index}.png`)}
+                    src={`/assets/projects/${index}.png`}
                     alt={project.name}
-                    className={styles.prework}
-                  ></Image>
+                    width={500}
+                    height={500}
+                    // className={`${styles.prework}`}
+                    sizes="(max-width: 1200px) auto, (max-width: 768px) 50vw, 33vw"
+                  />
                 </div>
                 <Carousel.Caption
                   className={styles.caption}
@@ -117,6 +84,6 @@ export default function Portfolio() {
           </Carousel>
         </div>
       </div>
-    </section>
+    </>
   );
 }

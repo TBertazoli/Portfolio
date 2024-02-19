@@ -3,8 +3,6 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Contact from "./components/Contact";
 
-import file from "./assets/Software developer - Resume.pdf";
-
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -29,7 +27,10 @@ export default function Home() {
           About Me<span>-&gt;</span>
         </Link>
 
-        <Link href={file} className={styles.card}>
+        <Link
+          href="/assets/Software developer - Resume.pdf"
+          className={styles.card}
+        >
           Resume<span>-&gt;</span>
         </Link>
       </div>
