@@ -8,10 +8,10 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function About() {
   return (
     <section>
-      <div className={styles.cover}>
+      {/* <div className={styles.cover}>
         <h2 className={styles.subtitle}>Professional Portfolio</h2>
-      </div>
-      <div id="about" className={styles.about_me}>
+      </div> */}
+      <div id="about">
         <div className={styles.title}>
           <h2>About Me</h2>
           <Link href="/">

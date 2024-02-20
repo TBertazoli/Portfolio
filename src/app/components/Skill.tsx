@@ -17,7 +17,7 @@ function Skills() {
   const [openFront, setOpenFront] = React.useState(true);
 
   const handleClickFront = () => {
-    setOpenFront(!open);
+    setOpenFront(!openFront);
   };
 
   const handleClickBack = () => {
@@ -29,16 +29,16 @@ function Skills() {
       <div className={styles.title}>
         <h2>Skills</h2>
       </div>
-      <div className={styles.description}>
-        <Grid item xs={12} md={6}>
+      <div style={skillCss}>
+        <Grid>
           <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            sx={{ width: "100%" }}
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
             <ListItemButton onClick={handleClickFront}>
               <ListItemText primary="Front End Tech Stack" />
-              {open ? <ExpandLess /> : <ExpandMore />}
+              {openFront ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={openFront} timeout="auto" unmountOnExit>
               <List component="div" disablePadding sx={{ pl: 4 }}>
@@ -53,7 +53,15 @@ function Skills() {
                 <ListItemText primary="Material-UI" />
               </List>
             </Collapse>
+          </List>
+        </Grid>
 
+        <Grid>
+          <List
+            sx={{ width: "100%", maxWidth: 360 }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+          >
             <ListItemButton onClick={handleClickBack}>
               <ListItemText primary="Back End Tech Stack" />
               {open ? <ExpandLess /> : <ExpandMore />}
@@ -79,3 +87,11 @@ function Skills() {
 }
 
 export default Skills;
+
+const skillCss = {
+  backgroundColor: "gray",
+  fontSize: "20px",
+  padding: "10px",
+  margin: "10px",
+  display: "flex",
+};
