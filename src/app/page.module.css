@@ -167,6 +167,7 @@
 /* Mobile */
 @media (max-width: 700px) {
   .content {
+    justify-content: center;
     padding: 4rem;
   }
 
@@ -174,7 +175,7 @@
     grid-template-columns: 1fr;
     margin-bottom: 120px;
     max-width: 320px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .card {
@@ -200,6 +201,7 @@
 
   .introduction {
     font-size: 0.8rem;
+    justify-content: center;
   }
 
   .introduction a {
@@ -241,10 +243,6 @@
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-
   .description_portfolio {
     background-color: gray;
     padding: 10px;
@@ -252,7 +250,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
   }
@@ -260,13 +258,13 @@
   .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
-}
+} */
 
-@keyframes rotate {
+/* @keyframes rotate {
   from {
     transform: rotate(360deg);
   }
   to {
     transform: rotate(0deg);
   }
-}
+} */

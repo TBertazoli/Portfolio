@@ -1,11 +1,9 @@
-// Type: Component File
-
-import profilePic from "../../assets/pictures/DSC08249_2.jpg";
 import styles from "../../page.module.css";
 import Image from "next/image";
 import Skills from "../../components/Skill";
 import Link from "next/link";
-import { TbArrowBackUpDouble } from "react-icons/tb";
+
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function About() {
   return (
@@ -17,15 +15,16 @@ export default function About() {
         <div className={styles.title}>
           <h2>About Me</h2>
           <Link href="/">
-            <TbArrowBackUpDouble />
+            <ArrowBackIosIcon />
           </Link>
         </div>
 
         <div className={styles.description}>
           <Image
-            src={profilePic}
+            src="/assets/pictures/DSC08249_2.jpg"
             width={400}
-            alt="profile"
+            height={400}
+            alt="Tatiana Bertazoli's profile picture"
             className={styles.profile_pic}
           ></Image>
           <p>

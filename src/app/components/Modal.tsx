@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles.module.css";
+import Typography from "@mui/material/Typography";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
+import Link from "next/link";
 
 interface ModalProps {
   onClose: () => void;
@@ -26,16 +31,27 @@ const Modal = ({ onClose, currentProject }: ModalProps) => {
         <div>
           <a href={website}>
             <Image
+              width={500}
+              height={500}
               className={styles.modalImage}
-              src={require(`../assets/projects/${index}.png`)}
+              src={`/assets/projects/${index}.png`}
               alt="current project"
+              style={{ maxWidth: "300px" }}
             ></Image>
           </a>
         </div>
-        <p>{description}</p>
-        <p>
-          <a href={repository}>Git Hub Repository</a>
-        </p>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ paddingBottom: "10px" }}
+        >
+          {description}
+        </Typography>
+        <a href={repository || ""}>
+          <IconButton>
+            <GitHubIcon />
+          </IconButton>
+        </a>
         <button type="button" className={styles.button72} onClick={onClose}>
           Close
         </button>
@@ -45,3 +61,9 @@ const Modal = ({ onClose, currentProject }: ModalProps) => {
 };
 
 export default Modal;
+
+{
+  /* <IconButton href={project.website}>
+<LaunchIcon />
+</IconButton> */
+}
