@@ -2,7 +2,7 @@
 
 import React from "react";
 import { projects } from "../../components/Projects";
-import Modal from "../../components/Modal";
+import ModalComp from "../../components/Modal";
 import Image from "next/image";
 import styles from "../../page.module.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -17,6 +17,8 @@ import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import { autocompleteClasses } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import AspectRatio from "@mui/joy/AspectRatio";
+
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import ShareIcon from "@mui/icons-material/Share";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -51,7 +53,7 @@ export default function Portfolio() {
         </div>
         <div>
           {isModalOpen && (
-            <Modal onClose={onClose} currentProject={currentProject} />
+            <ModalComp onClose={onClose} currentProject={currentProject} />
           )}
         </div>
         <div className={styles.description_portfolio}>
@@ -63,22 +65,29 @@ export default function Portfolio() {
           >
             {projects.map((project, index) => (
               <Carousel.Item key={project.name}>
-                <div style={{ position: "relative" }}>
+                <Card
+                  raised
+                  sx={{
+                    maxWidth: 500,
+                    margin: "0 auto",
+                    padding: "0.1em",
+                  }}
+                >
                   <Image
                     src={`/assets/projects/${index}.png`}
                     alt={project.name}
                     width={500}
                     height={500}
-                    // className={`${styles.prework}`}
                     sizes="(max-width: 1200px) auto, (max-width: 768px) 50vw, 33vw"
                   />
-                </div>
-                <Carousel.Caption
-                  className={styles.caption}
-                  onClick={() => openLink(project, index)}
-                >
-                  <h3 className={styles.project_name}>{project.name}</h3>
-                </Carousel.Caption>
+
+                  <Carousel.Caption
+                    className={styles.caption}
+                    onClick={() => openLink(project, index)}
+                  >
+                    <h3 className={styles.project_name}>{project.name}</h3>
+                  </Carousel.Caption>
+                </Card>
               </Carousel.Item>
             ))}
           </Carousel>

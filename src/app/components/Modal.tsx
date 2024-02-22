@@ -4,7 +4,9 @@ import styles from "../styles.module.css";
 import Typography from "@mui/material/Typography";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Modal from "@mui/material/Modal";
 import LaunchIcon from "@mui/icons-material/Launch";
+import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 
 interface ModalProps {
@@ -20,14 +22,24 @@ interface ModalProps {
     | undefined;
 }
 
-const Modal = ({ onClose, currentProject }: ModalProps) => {
+const ModalComp = ({ onClose, currentProject }: ModalProps) => {
   const { name, description, website, repository, index } =
     currentProject || {};
 
   return (
-    <div className={styles.modalBackdrop}>
-      <div className={styles.modalContainer}>
+    <div>
+      <div style={{ textAlign: "end" }}>
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{ display: "-ms-flexbox" }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </div>
+      <Typography component="div" className={styles.modalContainer}>
         <h3 className={styles.modalTitle}>{name} </h3>
+
         <div>
           <a href={website}>
             <Image
@@ -52,15 +64,12 @@ const Modal = ({ onClose, currentProject }: ModalProps) => {
             <GitHubIcon />
           </IconButton>
         </a>
-        <button type="button" className={styles.button72} onClick={onClose}>
-          Close
-        </button>
-      </div>
+      </Typography>
     </div>
   );
 };
 
-export default Modal;
+export default ModalComp;
 
 {
   /* <IconButton href={project.website}>

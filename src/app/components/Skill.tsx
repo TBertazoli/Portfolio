@@ -5,12 +5,10 @@ import styles from "../page.module.css";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import ListSubheader from "@mui/material/ListSubheader";
 
 function Skills() {
   const [open, setOpen] = React.useState(true);
@@ -26,11 +24,11 @@ function Skills() {
 
   return (
     <section>
-      <div className={styles.title}>
+      <div>
         <h2>Skills</h2>
       </div>
-      <div style={skillCss}>
-        <Grid>
+      <div style={{ display: "flex", width: "50%" }}>
+        <Grid style={{ width: "inherit" }}>
           <List
             sx={{ width: "100%" }}
             component="nav"
@@ -56,9 +54,9 @@ function Skills() {
           </List>
         </Grid>
 
-        <Grid>
+        <Grid style={{ width: "inherit" }}>
           <List
-            sx={{ width: "100%", maxWidth: 360 }}
+            sx={{ width: "100%" }}
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
@@ -87,11 +85,3 @@ function Skills() {
 }
 
 export default Skills;
-
-const skillCss = {
-  backgroundColor: "gray",
-  fontSize: "20px",
-  padding: "10px",
-  margin: "10px",
-  display: "flex",
-};

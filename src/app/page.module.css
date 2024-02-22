@@ -86,7 +86,6 @@
 }
 
 .description {
-  background-color: gray;
   text-align: justify;
   font-size: 20px;
   padding: 10px;
@@ -105,13 +104,6 @@
   padding: 10px;
   text-indent: 20px;
   line-height: 2;
-}
-
-.profile_pic {
-  margin: 15px;
-  float: right;
-  height: fit-content;
-  box-shadow: 3px 4px 25px black;
 }
 
 /*portfolio section*/
