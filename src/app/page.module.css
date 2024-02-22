@@ -63,49 +63,6 @@
   padding: 4rem 0;
 }
 
-/*about me section*/
-.subtitle {
-  font-size: 20px;
-  background-color: var(--tertiary--color);
-  color: rgb(105, 73, 103);
-  padding: 5px 5px;
-  margin: 15px;
-  position: absolute;
-}
-
-.cover {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  max-height: 200px;
-}
-
-.about_me {
-  margin: 0px 10px 30px 0px;
-  padding: 10px;
-}
-
-.description {
-  text-align: justify;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-  min-height: 400px;
-}
-
-.left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-height: 200px;
-}
-
-.description p {
-  padding: 10px;
-  text-indent: 20px;
-  line-height: 2;
-}
-
 /*portfolio section*/
 .title {
   font-size: 22px;
