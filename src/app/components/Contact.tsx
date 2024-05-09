@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./../styles.module.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";

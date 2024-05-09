@@ -8,6 +8,7 @@ import styles from "../../page.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import Link from "next/link";
 import { TbArrowBackUpDouble } from "react-icons/tb";
+import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -18,6 +19,7 @@ import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import { autocompleteClasses } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import AspectRatio from "@mui/joy/AspectRatio";
+import Contact from "@/app/components/Contact";
 
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import ShareIcon from "@mui/icons-material/Share";
@@ -43,56 +45,53 @@ export default function Portfolio() {
   };
 
   return (
-    <>
-      <div id="portfolio">
-        <div className={styles.title}>
+    <Container maxWidth="md">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <a href="/">
           <h2>Portfolio</h2>
-          <Link href="/">
-            <ArrowBackIosIcon />
-          </Link>
-        </div>
-        <div>
-          {isModalOpen && (
-            <ModalComp onClose={onClose} currentProject={currentProject} />
-          )}
-        </div>
-        <div className={styles.description_portfolio}>
-          <Carousel
-            activeIndex={index}
-            onSelect={handleSelect}
-            interval={null}
-            className={styles.carousel}
-          >
-            {projects.map((project, index) => (
-              <Carousel.Item key={project.name}>
-                <Card
-                  raised
-                  sx={{
-                    maxWidth: 500,
-                    margin: "0 auto",
-                    padding: "0.1em",
-                  }}
-                >
-                  <Image
-                    src={`/assets/projects/${index}.png`}
-                    alt={project.name}
-                    width={500}
-                    height={500}
-                    sizes="(max-width: 1200px) auto, (max-width: 768px) 50vw, 33vw"
-                  />
-
-                  <Carousel.Caption
-                    className={styles.caption}
-                    onClick={() => openLink(project, index)}
-                  >
-                    <h3 className={styles.project_name}>{project.name}</h3>
-                  </Carousel.Caption>
-                </Card>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
+        </a>
+        <Contact></Contact>
       </div>
-    </>
+      <div>
+        {isModalOpen && (
+          <ModalComp onClose={onClose} currentProject={currentProject} />
+        )}
+      </div>
+      <div className={styles.description_portfolio}>
+        <Carousel
+          activeIndex={index}
+          onSelect={handleSelect}
+          interval={null}
+          className={styles.carousel}
+        >
+          {projects.map((project, index) => (
+            <Carousel.Item key={project.name}>
+              <Card
+                raised
+                sx={{
+                  maxWidth: 500,
+                  margin: "0 auto",
+                  padding: "0.1em",
+                }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={500}
+                  height={500}
+                />
+
+                <Carousel.Caption
+                  className={styles.caption}
+                  onClick={() => openLink(project, index)}
+                >
+                  <h3 className={styles.project_name}>{project.name}</h3>
+                </Carousel.Caption>
+              </Card>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    </Container>
   );
 }
