@@ -19,25 +19,27 @@ export default function Portfolio() {
             <h2>Portfolio</h2>
           </a>
         </div>
-        {projects.map((project, index) => (
-          <Row key={index} style={{ marginBottom: "30px" }}>
-            <Col>
-              <h4>{project.name}</h4>
-              <p>{project.description}</p>
-              <Button>LEARN MORE</Button>
-            </Col>
-            <Col>
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={400}
-                height={300}
-              />
-            </Col>
-          </Row>
-        ))}
-        <Contact></Contact>
+        <div className="mt-5">
+          {projects.map((project, index) => (
+            <Row key={index} style={{ marginBottom: "30px" }}>
+              <Col>
+                <h4>{project.name}</h4>
+                <p>{project.description}</p>
+                <Button>LEARN MORE</Button>
+              </Col>
+              <Col>
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={400}
+                  height={300}
+                />
+              </Col>
+            </Row>
+          ))}
+        </div>
       </Container>
+      <Contact></Contact>
     </>
   );
 }

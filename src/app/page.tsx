@@ -20,8 +20,8 @@ export default function Home() {
           <h1> Tatiana Bertazoli</h1>
         </div>
         <Nav></Nav>
-        <Contact></Contact>
       </main>
+      <Contact></Contact>
     </>
   );
 }

@@ -23,4 +23,12 @@ export const projects = [
     repository: "https://github.com/TBertazoli/vet-records",
     image: "/assets/projects/pet-vex-vault.png",
   },
+  {
+    name: "BattleShip Blitz",
+    description:
+      "Battleship Blitz game is an online game where players engage in classic naval warfare against a computer opponent. Both Players fleets are randomly placed at the start of each games. Each turn, players can select an empty cell to attack, aiming to sink their opponent's ships before their own fleet suffers the same fate. With varying ship sizes and challenging AI, 'Battleship Blitz' offers an immersive and competitive gaming experience for naval enthusiasts. ",
+    website: "https://tbertazoli.github.io/battleship-game/",
+    repository: "https://github.com/TBertazoli/battleship-game",
+    image: "/assets/projects/battleship.png",
+  },
 ];
