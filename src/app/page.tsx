@@ -2,14 +2,11 @@
 import styles from "./page.module.css";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import { projects } from "./components/Projects";
 
 export default function Home() {
   return (
-    <>
-      <main className={styles.main}>
+    <main className={styles.main}>
+      <div className={styles.mainLayout}>
         <div className={styles.introduction}>
           <p>
             <code className={styles.code}>Welcome to my portfolio</code>
@@ -20,8 +17,8 @@ export default function Home() {
           <h1> Tatiana Bertazoli</h1>
         </div>
         <Nav></Nav>
-      </main>
+      </div>
       <Contact></Contact>
-    </>
+    </main>
   );
 }

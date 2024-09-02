@@ -1,11 +1,14 @@
 /* Main section */
 
 .main {
+  padding: 6rem 50rem;
+}
+
+.mainLayout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
@@ -34,6 +37,16 @@
   font-family: var(--font-mono);
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+/* Navbar component */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(25%, auto));
@@ -43,103 +56,67 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  background-color: transparent;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+/* about Me Page */
+.aboutMeSection {
+  margin-right: 30px;
 }
 
-.center {
+.profilePic {
+  box-shadow: 3px 4px 25px black;
+  border-radius: 10px;
+}
+
+/*portfolio Page*/
+
+.projectCard {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  justify-content: flex-end;
 }
 
-/*portfolio section*/
-.title {
+/* .title {
   font-size: 22px;
   color: #434146;
   margin: 10px;
-}
+} */
 
-.description_portfolio {
-  /* background-color: gray; */
-  text-align: justify;
+/* .description_portfolio { */
+/* background-color: gray; */
+/* text-align: justify;
   font-size: 20px;
   padding: 10px;
   margin: 10px;
   /* min-height: 600px; */
-  display: flex;
-  justify-content: center;
-}
+/* display: flex;
+  justify-content: center; */
+/* } */
 
-.prework {
+/* .prework {
   max-width: 600px;
   height: 400px;
-}
+} */
 
-.carousel img {
-  object-position: center;
-  object-fit: cover;
-}
-
-.caption {
+/* .caption {
   background-color: #939197;
   border-radius: 10px;
   border-color: rgba(67, 65, 70, 1);
   opacity: 0.7;
-}
-.project_name {
+} */
+/* .project_name {
   font-size: 15px;
   color: black;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
+} */
 
 /* Mobile */
 @media (max-width: 700px) {
-  .content {
-    justify-content: center;
-    padding: 4rem;
+  .main {
+    padding: 6rem 2rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    /* text-align: center; */
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
+  .mainLayout {
+    min-height: 70vh;
   }
 
   .center {
@@ -164,14 +141,13 @@
     padding: 1rem;
   }
 
-  .carousel img {
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
+  .aboutMeSection {
+    margin-right: 0;
   }
 
-  .profile_pic {
-    margin: 15px;
+  /* about me */
+  .profilePic {
+    margin-top: 30px;
     float: right;
     height: fit-content;
     width: -webkit-fill-available;
@@ -195,6 +171,15 @@
     position: fixed;
     width: 100%;
   }
+
+  .portfolio {
+    justify-content: center;
+  }
+
+  .projectCard {
+    margin-top: 20px;
+    justify-content: center;
+  }
 }
 
 /* Tablet and Smaller Desktop */
@@ -205,22 +190,3 @@
     margin: 10px;
   }
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-} */
-
-/* @keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-} */

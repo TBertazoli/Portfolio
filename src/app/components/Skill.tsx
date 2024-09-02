@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import styles from "../page.module.css";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -43,15 +40,19 @@ function Skills() {
                 <ListItemText primary="TypeScript" />
                 <ListItemText primary="JQuery" />
                 <ListItemText primary="React" />
-                <ListItemText primary="Next.js" />
+                <ListItemText primary="Next" />
                 <ListItemText primary="Bootstrap" />
-                <ListItemText primary="Material-UI" />
+                <ListItemText primary="MaterialUI" />
+                <ListItemText primary="Ejs" />
+                <ListItemText primary="Handlebars" />
+                <ListItemText primary="Sass" />
+                <ListItemText primary="AEM" />
               </List>
             </Collapse>
           </List>
         </Grid>
 
-        <Grid style={{ width: "inherit" }}>
+        {/* <Grid style={{ width: "inherit" }}>
           <List
             sx={{ width: "100%" }}
             component="nav"
@@ -63,19 +64,18 @@ function Skills() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <List component="div" disablePadding sx={{ pl: 4 }}>
-                <ListItemText primary="Node.js" />
-                <ListItemText primary="Express.js" />
+                <ListItemText primary="Node" />
+                <ListItemText primary="Express" />
                 <ListItemText primary="MySQL" />
                 <ListItemText primary="MongoDB" />
                 <ListItemText primary="Sequelize" />
                 <ListItemText primary="GraphQL" />
-                <ListItemText primary="Next.js" />
-                <ListItemText primary="Bootstrap" />
-                <ListItemText primary="Material-UI" />
+                <ListItemText primary="Python" />
+                <ListItemText primary="Django" />
               </List>
             </Collapse>
           </List>
-        </Grid>
+        </Grid> */}
       </div>
     </section>
   );

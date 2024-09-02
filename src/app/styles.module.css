@@ -2,7 +2,7 @@
 .logo {
   display: flex;
   justify-content: center;
-  /* margin-top: 60px; */
+  margin-top: 60px;
 }
 .logo a {
   margin: 10px;
