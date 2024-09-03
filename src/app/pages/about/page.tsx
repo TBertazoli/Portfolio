@@ -17,7 +17,7 @@ export default function About() {
               <h2>About Me</h2>
             </a>
           </div>
-          <Row className="mt-5">
+          <Row className={styles.description}>
             <Col className={styles.aboutMeSection}>
               <Typography
                 variant="h6"
@@ -34,13 +34,13 @@ export default function About() {
                 development.
               </Typography>
             </Col>
-            <Col>
+            <Col style={{ display: "flex", justifyContent: "center" }}>
               <Image
                 src="/assets/pictures/DSC08249_2.jpg"
                 alt="Tatiana Bertazoli's profile picture"
                 className={styles.image}
-                width={400}
-                height={325}
+                width={290}
+                height={225}
               ></Image>
             </Col>
           </Row>
