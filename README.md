@@ -2,7 +2,7 @@
 
 ## Description
 
-This portfolio is where I showcase some of the projects that I have developed over the course of my career. This project was created with Next.js framework and deployed at vercel.com. The website has an about me section with my image and a little description about myself and a portfolio section with some of my projects. When you click on an specific project you will see a modal with a description of the project a link to git hub repository and if clicked on the image it will take you to the deployed website. You can also see a pdf version of my resume.
+Welcome to my portfolio! Here, I showcase a selection of projects I’ve developed throughout my career. This website was built using the Next.js framework and is hosted on Vercel. It features an "About Me" section with my photo and a brief introduction, as well as a "Portfolio" section highlighting some of my projects, each with a link to the live application and its GitHub repository. Additionally, you can find a downloadable PDF version of my resume.
 
    <img src="public/assets/readme_pictures/readme1.png">
 
