@@ -21,8 +21,8 @@ export default function Portfolio() {
             <div className={styles.portfolio}>
               {projects.map((project, index) => (
                 <Row key={index} style={{ marginBottom: "50px" }}>
+                  <h4>{project.name}</h4>
                   <Col>
-                    <h4>{project.name}</h4>
                     <Typography
                       variant="h6"
                       component="p"

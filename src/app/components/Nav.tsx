@@ -12,10 +12,7 @@ export default function Nav() {
         About Me<span>-&gt;</span>
       </Link>
 
-      <Link
-        href="/assets/Software developer - Resume.pdf"
-        className={styles.card}
-      >
+      <Link href="/Tatiana_Bertazoli-Resume.pdf" className={styles.card}>
         Resume<span>-&gt;</span>
       </Link>
     </div>
