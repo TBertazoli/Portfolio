@@ -38,7 +38,7 @@ export default function About() {
               <Image
                 src="/assets/pictures/DSC08249_2.jpg"
                 alt="Tatiana Bertazoli's profile picture"
-                className={styles.profilePic}
+                className={styles.image}
                 width={400}
                 height={325}
               ></Image>
