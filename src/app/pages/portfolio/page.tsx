@@ -18,9 +18,13 @@ export default function Portfolio() {
             </a>
           </div>
           <div className="mt-5">
-            <div className={styles.portfolio}>
+            <div>
               {projects.map((project, index) => (
-                <Row key={index} style={{ marginBottom: "50px" }}>
+                <Row
+                  key={index}
+                  className={styles.description}
+                  style={{ marginBottom: "50px" }}
+                >
                   <h4>{project.name}</h4>
                   <Col>
                     <Typography
