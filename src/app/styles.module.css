@@ -1,6 +1,7 @@
 /* Contact section */
 .logo {
   display: flex;
+  justify-content: center;
 }
 .logo a {
   margin: 10px;
@@ -51,6 +52,13 @@
 
 .button_wrapper {
   justify-content: end;
+}
+
+.button-1 {
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  background-color: black;
 }
 
 .button72 {

@@ -1,23 +1,19 @@
-"use client";
-
 import React from "react";
-import styles from "../page.module.css";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import ListSubheader from "@mui/material/ListSubheader";
+import { Container, Col, Row } from "react-bootstrap";
 
 function Skills() {
   const [open, setOpen] = React.useState(true);
   const [openFront, setOpenFront] = React.useState(true);
 
   const handleClickFront = () => {
-    setOpenFront(!open);
+    setOpenFront(!openFront);
   };
 
   const handleClickBack = () => {
@@ -26,54 +22,67 @@ function Skills() {
 
   return (
     <section>
-      <div className={styles.title}>
-        <h2>Skills</h2>
-      </div>
-      <div className={styles.description}>
-        <Grid item xs={12} md={6}>
-          <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-          >
-            <ListItemButton onClick={handleClickFront}>
-              <ListItemText primary="Front End Tech Stack" />
-              {open ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            <Collapse in={openFront} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding sx={{ pl: 4 }}>
-                <ListItemText primary="HTML" />
-                <ListItemText primary="CSS" />
-                <ListItemText primary="JavaScript" />
-                <ListItemText primary="TypeScript" />
-                <ListItemText primary="JQuery" />
-                <ListItemText primary="React" />
-                <ListItemText primary="Next.js" />
-                <ListItemText primary="Bootstrap" />
-                <ListItemText primary="Material-UI" />
+      <Container>
+        <Row>
+          <Col>
+            <Grid style={{ width: "inherit" }}>
+              <List
+                sx={{ width: "100%" }}
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+              >
+                <ListItemButton onClick={handleClickFront}>
+                  <ListItemText primary="Front End Tech Stack" />
+                  {openFront ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={openFront} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding sx={{ pl: 4 }}>
+                    <ListItemText primary="HTML" />
+                    <ListItemText primary="CSS" />
+                    <ListItemText primary="JavaScript" />
+                    <ListItemText primary="TypeScript" />
+                    <ListItemText primary="JQuery" />
+                    <ListItemText primary="React" />
+                    <ListItemText primary="Next" />
+                    <ListItemText primary="Bootstrap" />
+                    <ListItemText primary="MaterialUI" />
+                    <ListItemText primary="Ejs" />
+                    <ListItemText primary="Handlebars" />
+                    <ListItemText primary="Sass" />
+                    <ListItemText primary="AEM" />
+                  </List>
+                </Collapse>
               </List>
-            </Collapse>
-
-            <ListItemButton onClick={handleClickBack}>
-              <ListItemText primary="Back End Tech Stack" />
-              {open ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding sx={{ pl: 4 }}>
-                <ListItemText primary="Node.js" />
-                <ListItemText primary="Express.js" />
-                <ListItemText primary="MySQL" />
-                <ListItemText primary="MongoDB" />
-                <ListItemText primary="Sequelize" />
-                <ListItemText primary="GraphQL" />
-                <ListItemText primary="Next.js" />
-                <ListItemText primary="Bootstrap" />
-                <ListItemText primary="Material-UI" />
+            </Grid>
+          </Col>
+          <Col>
+            <Grid style={{ width: "inherit" }}>
+              <List
+                sx={{ width: "100%" }}
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+              >
+                <ListItemButton onClick={handleClickBack}>
+                  <ListItemText primary="Back End Tech Stack" />
+                  {open ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding sx={{ pl: 4 }}>
+                    <ListItemText primary="Node" />
+                    <ListItemText primary="Express" />
+                    <ListItemText primary="MySQL" />
+                    <ListItemText primary="MongoDB" />
+                    <ListItemText primary="Sequelize" />
+                    <ListItemText primary="GraphQL" />
+                    <ListItemText primary="Python" />
+                    <ListItemText primary="Django" />
+                  </List>
+                </Collapse>
               </List>
-            </Collapse>
-          </List>
-        </Grid>
-      </div>
+            </Grid>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }

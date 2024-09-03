@@ -7,19 +7,20 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.introduction}>
-          <p>
-            <code className={styles.code}>Welcome to my portfolio</code>
-          </p>
-        </div>
+        <div className={styles.mainLayout}>
+          <div className={styles.introduction}>
+            <p>
+              <code className={styles.code}>Welcome to my portfolio</code>
+            </p>
+          </div>
 
-        <div className={styles.center}>
-          <h1> Tatiana Bertazoli</h1>
+          <div className={styles.center}>
+            <h1> Tatiana Bertazoli</h1>
+          </div>
+          <Nav></Nav>
         </div>
-        <Nav></Nav>
-
-        <Contact></Contact>
       </main>
+      <Contact></Contact>
     </>
   );
 }

@@ -1,89 +1,59 @@
 "use client";
 
-import React from "react";
 import { projects } from "../../components/Projects";
-import Modal from "../../components/Modal";
 import Image from "next/image";
 import styles from "../../page.module.css";
-import Carousel from "react-bootstrap/Carousel";
-import Link from "next/link";
-import { TbArrowBackUpDouble } from "react-icons/tb";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import { autocompleteClasses } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import ShareIcon from "@mui/icons-material/Share";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Container, Col, Row, Button } from "react-bootstrap";
+import Contact from "@/app/components/Contact";
+import { Typography } from "@mui/material";
 
 export default function Portfolio() {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const [currentProject, setCurrentProject] = React.useState();
-  const [index, setIndex] = React.useState(0);
-
-  const handleSelect = (selectedIndex: number) => {
-    setIndex(selectedIndex);
-  };
-
-  const openLink = (project: any, index: number) => {
-    setCurrentProject({ ...project, index: index });
-    setIsModalOpen(!isModalOpen);
-  };
-
-  const onClose = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-
   return (
     <>
-      <div id="portfolio">
-        <div className={styles.title}>
-          <h2>Portfolio</h2>
-          <Link href="/">
-            <ArrowBackIosIcon />
-          </Link>
-        </div>
-        <div>
-          {isModalOpen && (
-            <Modal onClose={onClose} currentProject={currentProject} />
-          )}
-        </div>
-        <div className={styles.description_portfolio}>
-          <Carousel
-            activeIndex={index}
-            onSelect={handleSelect}
-            interval={null}
-            className={styles.carousel}
-          >
-            {projects.map((project, index) => (
-              <Carousel.Item key={project.name}>
-                <div style={{ position: "relative" }}>
-                  <Image
-                    src={`/assets/projects/${index}.png`}
-                    alt={project.name}
-                    width={500}
-                    height={500}
-                    // className={`${styles.prework}`}
-                    sizes="(max-width: 1200px) auto, (max-width: 768px) 50vw, 33vw"
-                  />
-                </div>
-                <Carousel.Caption
-                  className={styles.caption}
-                  onClick={() => openLink(project, index)}
-                >
-                  <h3 className={styles.project_name}>{project.name}</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
-      </div>
+      <main className={styles.main}>
+        <Container>
+          <div>
+            <a href="/">
+              <h2>Portfolio</h2>
+            </a>
+          </div>
+          <div className="mt-5">
+            <div className={styles.portfolio}>
+              {projects.map((project, index) => (
+                <Row key={index} style={{ marginBottom: "50px" }}>
+                  <h4>{project.name}</h4>
+                  <Col>
+                    <Typography
+                      variant="h6"
+                      component="p"
+                      style={{ margin: "20px 0" }}
+                    >
+                      {project.description}
+                    </Typography>
+                    <Button style={{ marginRight: "10px" }}>
+                      <a href={project.website}>LAUNCH</a>
+                    </Button>
+                    <Button>
+                      <a href={project.repository}>GITHUB</a>
+                    </Button>
+                  </Col>
+                  <Col className={styles.projectCard}>
+                    <Image
+                      id="image"
+                      src={project.image}
+                      alt={project.name}
+                      className={styles.image}
+                      width={400}
+                      height={300}
+                    />
+                  </Col>
+                </Row>
+              ))}
+            </div>
+          </div>
+        </Container>
+        <Contact></Contact>
+      </main>
     </>
   );
 }
