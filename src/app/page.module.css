@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .introduction {
@@ -76,47 +76,10 @@
   justify-content: flex-end;
 }
 
-/* .title {
-  font-size: 22px;
-  color: #434146;
-  margin: 10px;
-} */
-
-/* .description_portfolio { */
-/* background-color: gray; */
-/* text-align: justify;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-  /* min-height: 600px; */
-/* display: flex;
-  justify-content: center; */
-/* } */
-
-/* .prework {
-  max-width: 600px;
-  height: 400px;
-} */
-
-/* .caption {
-  background-color: #939197;
-  border-radius: 10px;
-  border-color: rgba(67, 65, 70, 1);
-  opacity: 0.7;
-} */
-/* .project_name {
-  font-size: 15px;
-  color: black;
-} */
-
 /* Mobile */
 @media (max-width: 700px) {
   .main {
     padding: 3rem 2rem;
-  }
-
-  .mainLayout {
-    min-height: 70vh;
   }
 
   .center {
